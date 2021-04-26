@@ -6,11 +6,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastro de pessoa</title>
+	<link rel="shortcut icon" href="https://www.grupoalliance.com.br/wp-content/uploads/2016/09/%C3%ADcone-cadastro.png">
+	<title>Sistema de cadastros - Cadastre e visualize</title>
+	<!-- Data Table -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- JQuery Plugin Script -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<!-- JQuery Compatible with JQuery Mask-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<!-- JQuery Validator -->
@@ -19,6 +23,19 @@
 	<script src="js/localization/messages_pt_BR.js"></script>
 	<!-- Mask Plugin JQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+	<!-- Data Table JS -->
+	<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+	<script src="http://cdn.datatables.net/plug-ins/1.10.24/i18n/Portuguese-Brasil.json"></script>
+	<script>
+		$(document).ready( function () {
+    		$('#table').DataTable({
+    			"language": {
+    			        url: 'http://cdn.datatables.net/plug-ins/1.10.24/i18n/Portuguese-Brasil.json'
+    			    }
+    		});
+
+		});
+	</script>
 
 	 	<script>
 
@@ -106,11 +123,11 @@
 		        <div class="field is-grouped">
 		          <p class="control">
 		            <a class="bd-tw-button button" href="https://silasrodrigues19.github.io/public/9" target="_blank">
-		              <span>
-		                Portfolio
-		              </span>
 		              <span class="icon">
 		                <i class="fas fa-mug-hot"></i>
+		              </span>
+		              <span>
+		                Portfolio
 		              </span>
 		            </a>
 		          </p>	
@@ -253,32 +270,58 @@
 				<div class="columns is-centered">
 					<div class="column is-ralf">
 						<h1 class="title has-text-centered" id="cadastradas">Pessoas Cadastradas</h1>
-						<table class="table is-bordered">
-							<tr id="title">
-								<td>Nome</td>
-								<td>Celular</td>
-								<td >E-mail</td>
-								<td>Ações</td>
-							</tr>
-							<tr>
-								<td>Silas</td>
-								<td>999999</td>
-								<td>teste@teste.com</td>
-								<td>
-									<a class="button is-success is-small is-outlined is-rounded" id="btn-action" href="#">Editar</a>
-									<a class="button is-danger is-small is-outlined is-rounded" id="btn-action" href="#">Excluir</a>
-								</td>
-							</tr>
+						<table class="table" id="table">
+							<thead>
+							    <tr>
+							        <th>Nome</th>
+							        <th>Celular</th>
+							        <th>E-mail</th>
+							        <th>Ações</th>
+							    </tr>
+							</thead>
+							<tbody>
+							    <tr>
+							        <td>Silas</td>
+							        <td>(19) 98855-5588</td>
+							        <td>silasrodrigues.fatec@gmail.com</td>
+							        <td>
+							        	<a class="button is-success is-small is-outlined is-rounded" id="btn-action" href="#">Editar</a>
+							        	<a class="button is-danger is-small is-outlined is-rounded" id="btn-action" href="#">Excluir</a>
+							        </td>
+							    </tr>
+							</tbody>
+							<tfoot>
+							    <tr>
+							        <th>Nome</th>
+							        <th>Celular</th>
+							        <th>E-mail</th>
+							        <th>Ações</th>
+							    </tr>
+							</tfoot>
+							
 						</table>
 					</div>
 				</div>
 			</div>
 		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+		  <div class="content has-text-centered">
+		    <p>
+		      O código fonte é licenciado pelo
+		      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. O conteúdo do site é licenciado por <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+		    </p>
+		    <blockquote>
+		      "O sucesso é ir de fracasso em fracasso sem perder o entusiasmo."
+		    </blockquote>
+			<cite>- Winston Churchill</cite>
+		  </div>
+		</footer>
 	
-<script src="js/modal-bulma.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
+		<script src="js/modal-bulma.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="js/script.js"></script>
 </body>
 </html>

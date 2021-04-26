@@ -3,3 +3,4 @@ function acceptTerms() {
         this.checked = true;
     });
 }
+
