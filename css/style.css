@@ -76,10 +76,19 @@ form {
     width: 50%;
 }
 
+input[type="search"] {
+	font-weight: 900;
+	border-radius: 50%;
+}
+
 .table {
 	text-align: center;
 	width: 90%;
 	margin: 30px auto;
+}
+
+.table.is-hoverable tbody tr:not(.is-selected):hover {
+  background-color: rgba(30, 30, 30, .07);
 }
 
 .table, .table thead, .table.dataTable tbody tr {

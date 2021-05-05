@@ -1,5 +1,6 @@
 <?php
-	session_start();
+	require_once 'clientClass.php';
+	$c = new Customer("crudpdo", "localhost", "root", "");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,9 @@
 	<!-- Data Table -->
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
 
+	<!-- Swal CSS -->
+	<link rel="stylesheet" href="css/swal.css">
+	
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- JQuery Plugin Script -->
@@ -111,7 +115,7 @@
 		          </span>
 		        </a>
 		        <div class="navbar-dropdown is-boxed">
-		          <a class="navbar-item" href="#cadastradas">
+		          <a class="navbar-item" href="#cadastrados">
 			          <span>Cadastros</span>
 		          </a>
 		        </div>
@@ -160,17 +164,103 @@
 
 
 		<!-- Section Form -->
+		<?php 
+
+			if (isset($_POST['nome'])) // Clicou no botão cadastrar ou editar
+			{
+				if (isset($_GET['id_up']) && !empty($_GET['id_up'])) 
+				{
+					$id_upd = addslashes($_GET['id_up']);
+					$nome = addslashes($_POST['nome']);
+					$celular = addslashes($_POST['celular']);
+					$email = addslashes($_POST['email']);
+					if (!empty($nome) && !empty($celular) && !empty($email)) 
+					{
+						// Editar
+						($c->updateData($id_upd, $nome, $celular, $email))
+						
+		?>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+						<script>
+							swal({
+							  title: "Alterado com sucesso!",
+							  text: "Registro alterado!",
+							  icon: "success",
+							});
+							setTimeout(function(){location.href="index.php"} , 5000); 
+						</script>
+		<?php
+								
+
+					} 
+
+				} 
+				else // Cadastrar 
+				{ 
+					$nome = addslashes($_POST['nome']);
+					$celular = addslashes($_POST['celular']);
+					$email = addslashes($_POST['email']);
+					if (!empty($nome) && !empty($celular) && !empty($email)) 
+					{
+						// Cadastrar
+						if($c->registerCustomer($nome, $celular, $email))
+						{
+		?>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+						<script>
+							swal({
+							  title: "Cadastrado com sucesso!",
+							  text: "Registro inserido!",
+							  icon: "success",
+							});
+							setTimeout(function(){location.href="index.php"} , 5000); 
+						</script>
+		<?php
+						} 
+						else
+						{
+		?>
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+							<script>
+								swal({
+								  title: "Cadastrado falhou!",
+								  text: "Este e-mail já existe no banco de dados!",
+								  icon: "error",
+								});
+								setTimeout(function(){location.href="index.php"} , 5000); 
+							</script>
+		<?php
+						}
+
+					} 
+
+				}
+
+				
+			}
+		
+		?>
+
+		<?php 
+
+		if (isset($_GET['id_up'])) { // Se clicou no editar
+			$id_update = addslashes($_GET['id_up']);
+			$response = $c->fetchDataCustomer($id_update);
+		}
+
+		?> 
 		<section class="section">
 			<div class="container">
 				<div class="columns is-centered">
 					<div class="column is-ralf">
-						<h1 class="title has-text-centered">Cadastro de pessoas</h1>
-						<form action="" method="POST" id="form">
+						<h1 class="title has-text-centered"><?php if(isset($response)){echo "Alterar Cliente";} else {echo "Cadastrar Cliente";} ?></h1>
+
+						<form action="" method="POST" id="form" onsubmit="fetchDataTerms();">
 							<!-- Nome -->
 							<div class="field">
 								<label class="label height-label" for="nome">Nome</label>
 								<div class="control has-icons-left has-icons-right">
-									<input class="input is-dark is-rounded" type="text" placeholder="Seu nome" name="nome" id="nome">
+									<input class="input is-dark is-rounded" type="text" placeholder="Seu nome" name="nome" id="nome" value="<?php if(isset($response)){echo $response['nome'];} ?>">
 									 <span class="icon is-small is-left">
 									   <i class="fas fa-user"></i>
 									 </span>
@@ -184,7 +274,7 @@
 							<div class="field">
 								<label class="label height-label" for="celular">Celular</label>
 								<div class="control has-icons-left has-icons-right">
-									<input class="input is-dark is-rounded" type="text" placeholder="Seu número" name="celular" id="celular">
+									<input class="input is-dark is-rounded" type="text" placeholder="Seu número" name="celular" id="celular" value="<?php if(isset($response)){echo $response['celular'];} ?>">
 									 <span class="icon is-small is-left">
 									   <i class="fas fa-phone"></i>
 									 </span>
@@ -198,7 +288,7 @@
 							<div class="field">
 							  	<label class="label height-label" for="email">Email</label>
 							  	<div class="control has-icons-left has-icons-right">
-							    	<input class="input is-dark is-rounded" type="email" placeholder="Seu melhor e-mail" name="email" id="email">
+							    	<input class="input is-dark is-rounded" type="email" placeholder="Seu melhor e-mail" name="email" id="email" value="<?php if(isset($response)){echo $response['email'];} ?>">
 							    	<span class="icon is-small is-left">
 							      	  <i class="fas fa-envelope"></i>
 							    	</span>
@@ -212,8 +302,8 @@
 							<div class="field">
 							  <div class="control">
 							    <label class="checkbox">
-							      <input type="checkbox" class="termsAndConditions">
-							      Concordo com os <a href="#" id="btn">termos e condições</a>
+							      <input type="checkbox" name="checkbox" class="termsAndConditions" id="agree" onclick="fetchDataTerms();" checked>
+							      Li e concordo com os <a href="#" id="btn">termos e condições</a>
 							    </label>
 							  </div>
 							</div>
@@ -239,7 +329,7 @@
 							      	 </span>
 							      	 <span>Concordo</span>
 							      </button>
-							      <button class="button is-danger is-outlined" data-bulma-modal="close">
+							      <button class="button is-danger is-outlined" onclick="denyTerms();" data-bulma-modal="close">
 							      	<span class="icon has-text">
 							      	    <i class="fas fa-ban"></i>
 							      	 </span>
@@ -252,7 +342,7 @@
 							<!-- Submit Button -->
 							<div class="field is-grouped">
 							  <div class="control">
-							  	<input type="submit" class="button is-link is-small is-rounded" value="Enviar">
+							  	<input type="submit" class="button is-link is-small is-rounded" value="<?php if(isset($response)){echo "Alterar";} else {echo "Enviar";} ?>" onclick="acceptTerms();">
 							  </div>
 							  <div class="control">
 							  	<input type="reset" class="button is-link is-light is-small is-rounded" value="Limpar">
@@ -269,8 +359,8 @@
 			<div class="container">
 				<div class="columns is-centered">
 					<div class="column is-ralf">
-						<h1 class="title has-text-centered" id="cadastradas">Pessoas Cadastradas</h1>
-						<table class="table" id="table">
+						<h1 class="title has-text-centered" id="cadastrados">Clientes Cadastrados</h1>
+						<table class="table is-hoverable" id="table">
 							<thead>
 							    <tr>
 							        <th>Nome</th>
@@ -280,15 +370,37 @@
 							    </tr>
 							</thead>
 							<tbody>
-							    <tr>
-							        <td>Silas</td>
-							        <td>(19) 98855-5588</td>
-							        <td>silasrodrigues.fatec@gmail.com</td>
-							        <td>
-							        	<a class="button is-success is-small is-outlined is-rounded" id="btn-action" href="#">Editar</a>
-							        	<a class="button is-danger is-small is-outlined is-rounded" id="btn-action" href="#">Excluir</a>
-							        </td>
-							    </tr>
+						<?php 
+							$data = $c->fetchData();
+							if (count($data) > 0) {
+								for ($i = 0; $i < count($data); $i++) {
+									echo "<tr>";
+									foreach ($data[$i] as $key => $value) {
+										if ($key != "id") {
+											echo "<td>".$value."</td>";
+										}
+									}
+						?>
+									<td>
+										<a class="button is-success is-small is-outlined is-rounded" id="btn-action" href="index.php?id_up=<?php echo $data[$i]['id']; ?>">
+											<i class="fas fa-user-edit"></i>
+										</a>
+										<a class="button is-danger is-small is-outlined is-rounded" id="btn-action" href="index.php?id=<?php echo $data[$i]['id']; ?>">
+											<i class="fas fa-user-times"></i>
+										</a>
+									</td>
+
+						<?php
+									echo "</tr>";
+
+								}
+														
+								
+						
+							} else { // Banco vazio
+								echo 'Não há pessoas cadastradas';
+							}
+						?>
 							</tbody>
 							<tfoot>
 							    <tr>
@@ -297,8 +409,7 @@
 							        <th>E-mail</th>
 							        <th>Ações</th>
 							    </tr>
-							</tfoot>
-							
+							</tfoot>							
 						</table>
 					</div>
 				</div>
@@ -322,6 +433,18 @@
 		<script src="js/modal-bulma.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 		<script src="js/script.js"></script>
 </body>
 </html>
+
+<?php 
+
+	if (isset($_GET['id'])) 
+	{
+		$id_customer = addslashes($_GET['id']);
+		$c->deleteCustomer($id_customer);
+		header("Location: index.php");
+	}
+
+?>
