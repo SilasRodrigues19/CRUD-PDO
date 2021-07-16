@@ -1,16 +1,122 @@
-# CRUD-com-PDO
-CRUD em desenvolvimento pra aprender a utilizar PDO e praticar a utilização do bulma
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT Licence][license-shield]][license-url]
 
 
-### Pré visualização
-![Preview](https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview.png)
-![Preview](https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview2.png)
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="http://silasdev.epizy.com">
+    <img src="https://image.flaticon.com/icons/png/512/121/121202.png" alt="Logo" width="80" height="80">
+  </a>
 
-## Mensagem de error/sucesso envio
-![Success](https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/successMsg.png)
-![Error](https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/errorMsg.png)
+  <h3 align="center">Registration screen</h3>
 
-### Exemplo de validação
-![Validation preview](https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation.png)
-![Validation preview](https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png)
+  <p align="center">
+    Registration screen to register people.
+    <br />
+    <a href="#"><strong>Demo unavalaible</strong></a>
+    <br />
+  </p>
+</p>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![About View][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View2][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview2.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View3][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/successMsg.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View4][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/errorMsg.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View5][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View6][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+
+
+
+
+This project was built to learn a lit bit of Bulma Framework and PDO method.
+
+The website is divided into:
+* **Register**: register a person and save to database.
+* **Registered people**: it shows all people registered.
+
+### Built With
+
+Technologies used in the project.
+
+### Web Frameworks
+* [Bulma](https://bulma.io)
+
+### JavaScript Libraries
+* [jQuery](https://jquery.com)
+* [LightBox](https://lokeshdhakar.com/projects/lightbox2/) or cdn [LightBox CDN](https://cdnjs.com/libraries/lightbox2)
+* [Sweet Alert](https://sweetalert2.github.io)
+
+### Font Script
+* [Font Awesome](https://fontawesome.com)
+
+### Plugins
+* [jQuery Validator](https://jqueryvalidation.org)
+* [jQuery Mask](https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html)
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+<!-- LICENSE -->
+## License
+
+This work is licensed under a MIT License. See `LICENSE` for more information
+
+
+<!-- CONTACT -->
+## Contact
+
+Silas Rodrigues - [@jinuye1](https://twitter.com/jinuye1) - silasrodrigues.fatec@gmail.com
+
+Project Link: [https://github.com/SilasRodrigues19/CRUD-com-PDO](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+
+   
+   <!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
+[contributors-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
+[forks-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/network/members
+[stars-shield]: https://img.shields.io/github/stars/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
+[stars-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
+[issues-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/issues
+[license-shield]: https://img.shields.io/github/license/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
+[license-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/blob/master/LICENSE
+[product-screenshot]: https://i.ibb.co/dD1Cbnv/Desktop-preview.png
+[product-screenshot-mobile]: https://i.ibb.co/WtF63rT/Mobile-preview.png
 
