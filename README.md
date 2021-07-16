@@ -69,6 +69,7 @@ Technologies used in the project.
 ### JavaScript Libraries
 * [jQuery](https://jquery.com)
 * [Sweet Alert](https://sweetalert2.github.io)
+* [DataTables](https://datatables.net)
 
 ### Font Script
 * [Font Awesome](https://fontawesome.com)
