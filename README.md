@@ -43,12 +43,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![About View][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View2][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview2.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View3][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/successMsg.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View4][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/errorMsg.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View5][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View6][https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View][About View]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View2][About View2]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View3][About View3]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View4][About View4]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View5][About View5]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
+[![About View6][About View6]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
 
 
 
