@@ -107,14 +107,14 @@ Project Link: [https://github.com/SilasRodrigues19/CRUD-com-PDO](https://github.
    
    <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
-[contributors-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
-[forks-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/network/members
-[stars-shield]: https://img.shields.io/github/stars/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
-[stars-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/stargazers
-[issues-shield]: https://img.shields.io/github/issues/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
-[issues-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/issues
+[contributors-shield]: https://img.shields.io/github/contributors/SilasRodrigues19/CRUD-com-PDO.svg?style=for-the-badge
+[contributors-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SilasRodrigues19/CRUD-com-PDO.svg?style=for-the-badge
+[forks-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO/network/members
+[stars-shield]: https://img.shields.io/github/stars/SilasRodrigues19/CRUD-com-PDO.svg?style=for-the-badge
+[stars-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SilasRodrigues19/CRUD-com-PDO.svg?style=for-the-badge
+[issues-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO/issues
 [license-shield]: https://img.shields.io/github/license/SilasRodrigues19/CRUD-com-PDO/.svg?style=for-the-badge
 [license-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO//blob/master/LICENSE
 [About View]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview.png
