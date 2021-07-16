@@ -115,8 +115,12 @@ Project Link: [https://github.com/SilasRodrigues19/CRUD-com-PDO](https://github.
 [stars-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
 [issues-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/issues
-[license-shield]: https://img.shields.io/github/license/SilasRodrigues19/silasdev.epizy.com.svg?style=for-the-badge
-[license-url]: https://github.com/SilasRodrigues19/silasdev.epizy.com/blob/master/LICENSE
-[product-screenshot]: https://i.ibb.co/dD1Cbnv/Desktop-preview.png
-[product-screenshot-mobile]: https://i.ibb.co/WtF63rT/Mobile-preview.png
+[license-shield]: https://img.shields.io/github/license/SilasRodrigues19/CRUD-com-PDO/.svg?style=for-the-badge
+[license-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO//blob/master/LICENSE
+[About View]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview.png
+[About View2]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview2.png
+[About View3]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/successMsg.png
+[About View4]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/errorMsg.png
+[About View5]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png
+[About View6]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png
 
