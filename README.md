@@ -68,7 +68,6 @@ Technologies used in the project.
 
 ### JavaScript Libraries
 * [jQuery](https://jquery.com)
-* [LightBox](https://lokeshdhakar.com/projects/lightbox2/) or cdn [LightBox CDN](https://cdnjs.com/libraries/lightbox2)
 * [Sweet Alert](https://sweetalert2.github.io)
 
 ### Font Script
