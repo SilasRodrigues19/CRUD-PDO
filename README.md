@@ -44,12 +44,6 @@
 ## About The Project
 
 [![About View][About View]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View2][About View2]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View3][About View3]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View4][About View4]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View5][About View5]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-[![About View6][About View6]](https://github.com/SilasRodrigues19/CRUD-com-PDO)
-
 
 
 
@@ -117,10 +111,5 @@ Project Link: [https://github.com/SilasRodrigues19/CRUD-com-PDO](https://github.
 [issues-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO/issues
 [license-shield]: https://img.shields.io/github/license/SilasRodrigues19/CRUD-com-PDO.svg?style=for-the-badge
 [license-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/LICENSE
-[About View]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview.png?raw=true
-[About View2]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview2.png
-[About View3]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/successMsg.png
-[About View4]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/errorMsg.png
-[About View5]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png
-[About View6]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/validation2.png
+[About View]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview.gif
 
