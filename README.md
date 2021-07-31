@@ -113,3 +113,6 @@ Project Link: [https://github.com/SilasRodrigues19/CRUD-com-PDO](https://github.
 [license-url]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/LICENSE
 [About View]: https://github.com/SilasRodrigues19/CRUD-com-PDO/blob/main/img/preview.gif
 
+<br><hr>
+[🔼 Back to top](#Registration-Screen)
+
