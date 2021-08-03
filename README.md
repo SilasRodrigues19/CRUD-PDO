@@ -47,7 +47,7 @@
 
 
 
-This project was built to learn a litle bit of Bulma Framework and PDO method.
+This project was built to learn a little bit of Bulma Framework and PDO method.
 
 The website is divided into:
 * **Register**: register a person and save to database.
