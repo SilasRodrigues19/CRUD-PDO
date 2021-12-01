@@ -6,6 +6,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
+<samp>
 <p align="center">
   <a href="http://silasdev.epizy.com">
     <img src="https://image.flaticon.com/icons/png/512/121/121202.png" alt="Logo" width="80" height="80">
